@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    flex-direction: column; 
+    position: static;
+    background-color: #000;
+    align-items: center;
+}
+
+.buttonContainer {
+    background-color: #000;
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    position: fixed;
+    justify-content: center;
+}
+
+.getButton {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+    width: 134px;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    position: static;
+    justify-content: center;
+}
+
+.getButton:active {
+    border: 1px solid #000;
+}
+
+.navbar {
+    display: flex;
+    background-color: rgba(33,33,33,1);
+    color: #fff;
+    width: 100%;
+    flex-direction: row;
+    position: fixed;
+    margin-top: 67px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: large;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.nav nav ul {
+    list-style: none;
+    display: flex;
+    margin: auto 10px;
+}
+
+.nav nav ul li {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
