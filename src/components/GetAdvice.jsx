@@ -21,8 +21,8 @@ function GetAdvice() {
           <div>
             <h1>Who we are? What we are doing?</h1>
             <iframe
-              width="560"
-              height="315"
+              width="auto"
+              height="auto"
               src="https://www.youtube-nocookie.com/embed/TX5a89UfljM?controls=0"
               title="YouTube video player"
               frameborder="0"
@@ -30,7 +30,7 @@ function GetAdvice() {
               allowfullscreen
             ></iframe>
           </div>
-          <div>
+          <div className="formInnerContainer">
             <label>
               <p>Name (नाम)</p>
               <input type="text" required />
@@ -44,7 +44,7 @@ function GetAdvice() {
               <input type="text" required />
             </label>
             <label>
-              <p>Want to get vastu advice for:</p>
+              <p style={{margin: "5px 5px"}}>Want to get vastu advice for:</p>
               <div>
                 <label>
                   <input type="checkbox" value="Home" required />
@@ -61,7 +61,7 @@ function GetAdvice() {
               </div>
             </label>
           </div>
-          <button>Submit</button>
+          <button className="getAdviceSubmit">Submit</button>
         </form>
       </div>
     </div>
