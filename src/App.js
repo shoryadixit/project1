@@ -10,19 +10,21 @@ import FreeAdvice from './components/FreeAdvice';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className='App'>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Banner />} />
-          <Route path='/getAdvice' element={<GetAdvice />} />
-          <Route path='/bhaktaamerStotra' element={<BhaktaamerStotra />} />
-          <Route path='vastuAdvice' element={<VastuAdvice />} />
-          <Route path='astrologyAdvice' element={<AstrologyAdvice />} />
-          <Route path='freeAdvice' element={<FreeAdvice />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <div className='App'>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Banner />} />
+            <Route path='/getAdvice' element={<GetAdvice />} />
+            <Route path='/bhaktaamerStotra' element={<BhaktaamerStotra />} />
+            <Route path='/vastuAdvice' element={<VastuAdvice />} />
+            <Route path='/astrologyAdvice' element={<AstrologyAdvice />} />
+            <Route path='/freeAdvice' element={<FreeAdvice />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </>
   );
 }
 

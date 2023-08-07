@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/BhaktaamerStotra.css";
+import Footer from "./Footer"
 
 function BhaktaamerStotra() {
   const stotras = [
@@ -31,7 +32,7 @@ function BhaktaamerStotra() {
 
 
   return (
-    <div className="container">
+    <div className="BhaktaamerStotracontainer">
       <div className="bannerContainer">
         <h1>Shri Bhaktamara Stotra</h1>
         <h1 style={{ fontWeight: 400 }}>(श्री भक्तामर स्तोत्र)</h1>
@@ -51,6 +52,7 @@ function BhaktaamerStotra() {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

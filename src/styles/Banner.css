@@ -1,8 +1,65 @@
 .banner {
     margin-top: 80px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     height: 100vh;
-    background-image: url('../images/20230727_173543_0000.png');
+    background-image: url('../images/download.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all ease .3s;
+}
+
+.logosContainer {
+    background-color: #fff;
+    display: grid;
+    height: 130vh;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 10fr));
+    justify-content: center;
+    width: 100%;
+    margin-top: 750px;
+}
+
+.logosContainer img {
+    max-width: 47vw!important;
+    min-height: fit-content;
+    border-radius:.3rem ;
+    margin : 0;
+    padding: 0;
+    object-fit: contain;
+}
+
+.VastuImgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.VastuImgContainer h3 {
+    cursor: pointer;
+    color: red;
+}
+
+.RashiImgContainer h3 {
+    cursor: pointer;
+    color: rgb(29, 180, 29);
+}
+
+.RashiImgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+p {
+    width: 290px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    white-space : pre-line;
+    text-align: center;
+    transition: all ease .3s;
 }

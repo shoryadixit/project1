@@ -1,13 +1,14 @@
 import React from "react";
-import "../styles/FreeAdvice.css";
+import "../styles/GetAdvice.css"
+import Footer from "./Footer";
 
 function FreeAdvice() {
   return (
-    <div className="container">
+    <div className="GetAdvicecontainer">
       <div className="getAdviceBanner">
         Free Advice<p>समाज की अभूतपूर्व भलाई के लिए</p>
       </div>
-      <div className="formContainer">
+      <div className="GetAdviceformContainer">
         <form>
           <div>
             <h1>Get Appointment</h1>
@@ -20,7 +21,7 @@ function FreeAdvice() {
               </ul>
             </p>
           </div>
-          <div className="formInnerContainer">
+          <div className="GetAdviceformInnerContainer">
             <label>
               <p>Name (नाम)</p>
               <input type="text" required />
@@ -54,6 +55,7 @@ function FreeAdvice() {
           <button className="getAdviceSubmit">Submit</button>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }

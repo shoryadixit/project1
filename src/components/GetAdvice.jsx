@@ -1,14 +1,43 @@
 import React from "react";
+import emailjs from "emailjs-com";
 import "../styles/GetAdvice.css";
+import Footer from "./Footer";
 
 function GetAdvice() {
+  function sendEmail(e) {
+    e.preventDefault();
+
+    // Replace these values with your actual email service configuration
+    const serviceId = "service_nkchyg8";
+    const templateId = "template_xza5olm";
+    const userId = "JN3gSPVerLEVgLUuC";
+
+    const formData = new FormData(e.target);
+    const jsonData = {};
+    formData.forEach((value, key) => {
+      jsonData[key] = value;
+    });
+
+    emailjs.sendForm(serviceId, templateId, e.target, userId).then(
+      (result) => {
+        console.log("Email sent successfully!", result.text);
+        alert("Thank you! Your form has been submitted.");
+        e.target.reset();
+      },
+      (error) => {
+        console.error("Error sending email:", error);
+        alert("Sorry, there was an issue submitting the form. Please try again later.");
+      }
+    );
+  }
+
   return (
-    <div className="container">
+    <div className="GetAdvicecontainer">
       <div className="getAdviceBanner">Get Appointment</div>
-      <div className="formContainer">
-        <form>
+      <div className="GetAdviceformContainer">
+        <form onSubmit={sendEmail}>
           <div>
-            <h1>Get Appointment</h1>
+            <h1 className="getHeader">Get Appointment</h1>
             <p>@just ₹.11/- per sq. feet</p>
             <p>
               <ul>
@@ -30,40 +59,43 @@ function GetAdvice() {
               allowfullscreen
             ></iframe>
           </div>
-          <div className="formInnerContainer">
+          <div className="GetAdviceformInnerContainer">
             <label>
               <p>Name (नाम)</p>
-              <input type="text" required />
+              <input type="text" name="from_name" required />
             </label>
             <label>
               <p>Mobile (सम्पर्क)</p>
-              <input type="text" required />
+              <input type="text" name="mobile" required />
             </label>
             <label>
               <p>City (शहर)</p>
-              <input type="text" required />
+              <input type="text" name="city" required />
             </label>
             <label>
-              <p style={{margin: "5px 5px"}}>Want to get vastu advice for:</p>
-              <div>
+              <p style={{ margin: "5px 5px" }}>Want to get vastu advice for:</p>
+              <div className="checkboxInput">
                 <label>
-                  <input type="checkbox" value="Home" required />
+                  <input type="checkbox" name="adviceFor" value="Home" />
                   <span>Home</span>
                 </label>
                 <label>
-                  <input type="checkbox" value="Office" required />
+                  <input type="checkbox" name="adviceFor" value="Office" />
                   <span>Office</span>
                 </label>
                 <label>
-                  <input type="checkbox" value="Factory" required />
+                  <input type="checkbox" name="adviceFor" value="Factory" />
                   <span>Factory</span>
                 </label>
               </div>
             </label>
           </div>
-          <button className="getAdviceSubmit">Submit</button>
+          <button type="submit" className="getAdviceSubmit">
+            Submit
+          </button>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }

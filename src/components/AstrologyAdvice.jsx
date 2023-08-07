@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/AstrologyAdvice.css";
+import Footer from "./Footer";
 
 function AstrologyAdvice() {
   const advices = [
@@ -30,20 +31,21 @@ function AstrologyAdvice() {
   ];
 
   return (
-    <div className="container">
-      <div className="bannerContainer">
+    <div className="AstrologyAdvicecontainer">
+      <div className="AstrologyAdvicebannerContainer">
         <h1>We Offer The Following</h1>
         <h1>Astrology Consultation Services</h1>
       </div>
-      <div className="adviceBox">
+      <div className="AstrologyAdviceBox">
         {advices.map((ad) => (
-          <div key={ad.id} className="adviceContainer">
+          <div key={ad.id} className="AstrologyAdviceContainer">
             <div className="box" />
             <h1>{ad.title}</h1>
             <p>{ad.description}</p>
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

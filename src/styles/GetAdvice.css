@@ -1,19 +1,15 @@
-.cotainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.GetAdvicecontainer {
     background-color: #fff;
-    align-items: center;
 }
 
 .getAdviceBanner {
-    margin-top: 130px;
     background-image: url('../images/stars.jpeg');
     background-size: 100%;
+    margin-top: 90px;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100%;
-    height: 280px;
+    width: 100%;    
+    height: 400px;
     display: flex;
     color: #fff;
     flex-direction: column;
@@ -22,16 +18,18 @@
     font-size: xx-large;
 }
 
-.formContainer {
+.GetAdviceformContainer {
     display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
+    transition: all ease .3s;
 }
 
-.formContainer form {
+.GetAdviceformContainer form {
     border-radius: 3px;
+    width: 800px;
     margin: 20px;
     background-color: #fff;
     display: flex;
@@ -40,6 +38,7 @@
     padding: 30px;
     margin-top: 20px;
     border-radius: 20px;
+    transition: all ease .3s;
 }
 
 form h1 {
@@ -53,6 +52,7 @@ form p {
 
 form ul {
     list-style-type: disc;
+    text-align: left;
     padding-left: 20px;
 }
 
@@ -63,6 +63,7 @@ label {
 
 input[type="text"] {
     width: 350px;
+    outline: none;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -70,11 +71,12 @@ input[type="text"] {
 
 input[type="checkbox"] {
     vertical-align: middle;
-    position: relative;
+    position: static;
     top: -1px;
     width: 20px;
     height: 20px;
     margin-right: 8px;
+    transition: all ease .3s;
 }
 
 div>label {
@@ -82,34 +84,293 @@ div>label {
     display: inline-block;
     justify-content: center;
     align-items: center;
+    transition: all ease .3s;
 }
 
 .getAdviceSubmit {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
-    margin-top: 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     width: 100%;
-    transition: .3s ease;
+    transition:  all .3s ease;
 }
 
-.formInnerContainer {
+.GetAdviceformInnerContainer {
     margin-top: 20px;
+    display: grid;
+    width: auto;
+    grid-template-columns: 370px 1fr;
 }
 
 
 .getAdviceSubmit:hover {
     background-color: #0056b3;
-} 
+}
 
-@media (min-width: 800px) {
-    form {
-        width: 800px;
+
+
+
+@media (max-width: 950px) {
+    .GetAdviceformContainer form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        transition: all ease .3s;
+    }
+
+    input [type="text"] {
+        width: 100px;
+    }
+
+    .GetAdviceformInnerContainer {
+        display: grid;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        transition: all ease .3s;
+        grid-template-columns: 360px;
+    }
+
+    .getAdviceSubmit {
+        width: 300px;
+    }
+}
+
+@media (max-width: 750px) {
+    .getAdviceBanner {
+        height: 320px;
+    }
+
+    .GetAdviceformContainer form {
+        width: 455px;
+        display: flex;
+        margin: 20px;
+        justify-content: center;
+        align-items: center;
+        transition: all ease .3s;
+    }
+
+    .GetAdviceformInnerContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all ease .3s;
+    }
+
+    input[type="text"] {
+        width: 90%;
+        margin-left: 16px;
+        outline: none;
+        transition: all ease .3s;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .getAdviceBanner {
+        height: 320px;
+    }
+
+    .GetAdviceformContainer form {
+        width: 355px;
+        display: flex;
+        margin: 20px;
+        justify-content: center;
+        align-items: center;
+        transition: all ease .3s;
+    }
+
+    .GetAdviceformInnerContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all ease .3s;
+    }
+
+    input[type="text"] {
+        width: 90%;
+        margin-left: 16px;
+        outline: none;
+        transition: all ease .3s;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
     }
 }
 
 
+@media (max-width: 410px) {
+    .getAdviceBanner {
+        height: 320px;
+    }
+
+    .GetAdviceformContainer form {
+        width: 355px;
+        display: flex;
+        margin: 20px;
+        justify-content: center;
+        align-items: center;
+        transition: all ease .3s;
+    }
+
+    .GetAdviceformInnerContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all ease .3s;
+    }
+
+    input[type="text"] {
+        width: 90%;
+        margin-left: 16px;
+        outline: none;
+        transition: all ease .3s;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+}
+
+
+/* @media (max-width: 380px) {
+    .getAdviceBanner {
+        height: 320px;
+    }
+
+    .GetAdviceformContainer form {
+        width: 355px;
+        display: flex;
+        margin: 20px;
+        justify-content: center;
+        align-items: center;
+        transition: all ease .3s;
+    }
+
+    .GetAdviceformInnerContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all ease .3s;
+    }
+
+    input[type="text"] {
+        width: 90%;
+        margin-left: 16px;
+        outline: none;
+        transition: all ease .3s;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+} */
+
+@media (max-width: 380px) {
+    .getAdviceBanner {
+        height: 320px;
+        font-size: larger;
+    }
+
+    .GetAdviceformContainer form {
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all ease .3s;
+    }
+
+    .GetAdviceformInnerContainer {
+        display: grid;
+        place-items: center;
+        width: 70%;
+        transition: all ease .3s;
+    }
+
+    input[type="text"] {
+        width: 230px;
+        margin: 0;
+        outline: none;
+        transition: all ease .3s;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+
+    .getHeader {
+        position: absolute;
+        top: 435px;
+        margin-left: 55px;
+    }
+
+    form h1 {
+        font-size: .7rem;
+        margin-bottom: 10px;
+    }
+    
+    form p {
+        font-size: .8rem;
+        margin: 5px;
+        width: auto;
+    }
+    
+    form ul {
+        list-style-type: disc;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    label {
+        display: block;
+        font-size: .8rem;
+        margin-bottom: 10px;
+    }
+
+    iframe {
+        width: 200px;
+        height: 200px;
+    }
+
+    input[type="checkbox"] {
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+        width: 15px;
+        height: 15px;
+        margin-right: 1px;
+        transition: all ease .3s;
+    }
+
+    .checkboxInput {
+        margin-left: 25px;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .getAdviceSubmit {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+        transition:  all .3s ease;
+    }
+
+    .getAdviceSubmit:hover {
+        background-color: #0056b3;
+    }
+}
