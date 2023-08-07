@@ -13,11 +13,12 @@
 .logosContainer {
     background-color: #fff;
     display: grid;
-    height: 130vh;
+    padding-top: 20px;
+    height: 150vh;
     grid-template-columns: repeat(auto-fit, minmax(300px, 10fr));
     justify-content: center;
     width: 100%;
-    margin-top: 750px;
+    margin-top: 850px;
 }
 
 .logosContainer img {
@@ -62,4 +63,11 @@ p {
     white-space : pre-line;
     text-align: center;
     transition: all ease .3s;
+}
+
+@media (min-height: 1300px) {
+    .logosContainer {
+        height: 200vh;
+        margin-top: 950px;
+    }
 }
